@@ -1,0 +1,49 @@
+.header {
+	// position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+	background-color: #efefef;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 85px;
+	}
+	&__logo {
+		position: relative;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		&:after {
+			content: 'Waxom';
+			font-size: 34px;
+			vertical-align: 35%;
+			font-family: 'Raleway', serif;
+			font-weight: 400;
+		}
+	}
+	&__menu {}
+}
+.menu {
+	&__icon {}
+	&__body {}
+	&__list {
+		@include flexbox();
+		li {
+			position: relative;
+			padding: 0 10px;
+		}
+
+	}
+	&__link {
+		font-size: 14px;
+		font-family: 'Montserrat', serif;
+		font-weight: 300;
+		text-decoration: none;
+
+	}
+}
+.icon-menu {
+}

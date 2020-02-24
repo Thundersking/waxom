@@ -1,0 +1,15 @@
+@import "nullstyle.css";
+@import "mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800&display=swap');
+@import "header.scss";
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.container{
+	max-width: 1170px;
+	padding: 0px 15px;
+	margin: 0px auto;
+}
