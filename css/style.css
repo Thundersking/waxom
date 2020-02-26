@@ -17,7 +17,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 85px; }
+    height: 80px; }
   .header__logo {
     position: relative;
     right: 0;
@@ -46,16 +46,14 @@
     -ms-flex-align: center;
     align-items: center;
     display: -webkit-box;
-    display: -moz-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    font-size: 0;
     position: relative;
     z-index: 2; }
     .header__list li {
       position: relative;
-      padding: 0 13.3px; }
+      padding: 0 13.3px;
+      list-style-type: none; }
       .header__list li:nth-child(9) {
         padding: 0px 15px 0px 50px; }
       @media (max-width: 1024px) {
@@ -74,14 +72,22 @@
     font-weight: 300;
     text-decoration: none;
     color: #fff; }
+  .header__form {
+    display: none; }
 
 @media (max-width: 890px) {
+  body.lock {
+    overflow: hidden; }
+  .header__body {
+    height: 30px; }
+  .header__row {
+    height: 60px; }
   .header__burger {
     display: block;
-    position: relative;
     width: 30px;
     height: 20px;
-    position: relative;
+    position: fixed;
+    right: 25px;
     z-index: 3; }
   .header__burger span {
     /*создаем полоску по середине*/
@@ -132,7 +138,7 @@
   .header__menu {
     /*фиксируем и делаем фон для открытого меню бургера*/
     position: fixed;
-    top: -100%;
+    top: -120%;
     /*сначала мы пишем top:0, но потом чтобы меню появлялось сверху плавно то пишем уже top:-100%;*/
     left: 0;
     width: 100%;
@@ -142,18 +148,41 @@
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background-color: #18b5a4;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 70px 10px 20px 10px;
     /*спускает навигацию вниз*/ }
   .header__menu.active {
     top: 0; }
   .header__list {
     display: block;
-    /*отключаем display: flex и навигация размещается в столбец*/ }
+    /*отключаем display: flex и навигация размещается в столбец*/
+    text-align: center; }
   .header__list li {
-    margin: 0px 0px 20px 0px; }
+    margin: 0px 0px 20px 0px;
+    padding: 4px 0px; }
+    .header__list li:nth-child(10):active {
+      display: none; }
   .header__link {
-    font-size: 24px; } }
+    font-size: 24px; }
+  .header__form {
+    display: block;
+    position: relative;
+    width: 300px;
+    margin: 0 auto; }
+    .header__form input {
+      color: #fff; }
+  .header__input {
+    padding: 10px 20px;
+    color: #000;
+    background-color: #000;
+    border: none;
+    border-radius: 10px; }
+  .header__button {
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #998675;
+    border: none; } }
 
 .wrapper {
   overflow: hidden;
