@@ -42,7 +42,7 @@
 	}
 	&__list {
 		align-items: center;
-		@include flexbox();
+		display: flex;
 		position: relative;
 		z-index: 2;
 		li {
@@ -77,12 +77,12 @@
 
 
 @media (max-width:890px){
-	// body.lock {
-	// 	overflow: hidden;
-	// }
-	// .header__row {
-	// 	height: 60px;
-	// }
+	body.lock {
+		overflow: hidden;
+	}
+	.header__row {
+		height: 60px;
+	}
 	.header__burger {
 		display: block;
 		position: relative;
@@ -141,7 +141,7 @@
 		height: 100%;
 		overflow: auto; /*если в меню много слов/строк и т.д. то будет скролл*/
 		transition: all 0.3s ease 0s;
-		background-color: #18b5a4;
+		background-color: rgba(249, 201, 16, 0);
 		padding: 70px 10px 20px 10px; /*спускает навигацию вниз*/
 	}
 
