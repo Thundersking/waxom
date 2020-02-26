@@ -9,7 +9,25 @@
 }
 
 .container{
-	max-width: 1170px;
+	max-width: 1180px;
 	padding: 0px 15px;
 	margin: 0px auto;
 }
+
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.main-screen {
+	height: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+

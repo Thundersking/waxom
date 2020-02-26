@@ -1,12 +1,13 @@
+@charset "UTF-8";
 @import url(nullstyle.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800&display=swap");
 .header {
+  position: absolute;
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 50;
-  background-color: #efefef; }
-  .header__row {
+  top: 25px; }
+  .header__body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -20,37 +21,160 @@
   .header__logo {
     position: relative;
     right: 0;
-    top: 0;
-    z-index: 2; }
+    top: 0; }
+    .header__logo img {
+      max-width: 100%; }
+      @media (max-width: 967px) {
+        .header__logo img {
+          width: 50px;
+          height: 50px; } }
     .header__logo:after {
       content: 'Waxom';
       font-size: 34px;
       vertical-align: 35%;
       font-family: 'Raleway', serif;
-      font-weight: 400; }
-
-.menu__list {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 0; }
-  .menu__list li {
+      font-weight: 400;
+      color: #fff; }
+      @media (max-width: 967px) {
+        .header__logo:after {
+          font-size: 20px;
+          vertical-align: 70%; } }
+  .header__burger {
+    display: none; }
+  .header__list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
     position: relative;
-    padding: 0 10px; }
+    z-index: 2; }
+    .header__list li {
+      position: relative;
+      padding: 0 13.3px; }
+      .header__list li:nth-child(9) {
+        padding: 0px 15px 0px 50px; }
+      @media (max-width: 1024px) {
+        .header__list li {
+          padding: 0 12px; }
+          .header__list li:nth-child(9) {
+            padding: 0px 12px 0px 20px; } }
+      @media (max-width: 967px) {
+        .header__list li {
+          padding: 0 10px; }
+          .header__list li:nth-child(9) {
+            padding: 0px 10px 0px 15px; } }
+  .header__link {
+    font-size: 14px;
+    font-family: 'Montserrat', serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff; }
 
-.menu__link {
-  font-size: 14px;
-  font-family: 'Montserrat', serif;
-  font-weight: 300;
-  text-decoration: none; }
+@media (max-width: 890px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3; }
+  .header__burger span {
+    /*создаем полоску по середине*/
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+  .header__burger:before {
+    /*прижимаем верхнюю полоску вверх*/
+    top: 0; }
+  .header__burger:after {
+    /*прижимаем нижнюю полоску вниз*/
+    bottom: 0; }
+  .header__burger.active:before {
+    /*.active это из JS файлы, т.е. что будет происходить когда добавляется класс active элементу и делаем из бургера крестик*/
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /*поварачиваем верхнюю палку на 45 градусов*/
+    top: 9px; }
+  .header__burger.active:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /*поварачиваем нижнюю палку на 45 градусов*/
+    bottom: 9px; }
+  .header__burger.active span {
+    /*убираем среднюю палочку при добавление класса active*/
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .header__menu {
+    /*фиксируем и делаем фон для открытого меню бургера*/
+    position: fixed;
+    top: -100%;
+    /*сначала мы пишем top:0, но потом чтобы меню появлялось сверху плавно то пишем уже top:-100%;*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /*если в меню много слов/строк и т.д. то будет скролл*/
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #18b5a4;
+    padding: 70px 10px 20px 10px;
+    /*спускает навигацию вниз*/ }
+  .header__menu.active {
+    top: 0; }
+  .header__list {
+    display: block;
+    /*отключаем display: flex и навигация размещается в столбец*/ }
+  .header__list li {
+    margin: 0px 0px 20px 0px; }
+  .header__link {
+    font-size: 24px; } }
 
 .wrapper {
   overflow: hidden;
   min-height: 100%; }
 
 .container {
-  max-width: 1170px;
+  max-width: 1180px;
   padding: 0px 15px;
   margin: 0px auto; }
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.main-screen {
+  height: 100%; }
+  .main-screen img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
