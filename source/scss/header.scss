@@ -10,7 +10,6 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 80px;
-
 	}
 	&__logo {
 		// flex: 0 0 100px;
@@ -77,124 +76,187 @@
 	&__form {
 		display: none;
 	}
+	&__main {
+		
+	}
+	&__content {
+		position: relative;
+		top: 265px;
+		.contain {
+			width: 800px;
+			margin: 0 auto;
+		}
+	}
+	&__text {
+		text-align: center;
+		color: #fff;
+	}
+	&__title {
+		h1 {
+			font-family: 'Raleway', serif;
+			font-size: 52px;
+			font-weight: 800;
+			margin: 0;
+		}
+		span {
+			font-size: 36px;
+			font-weight: 500;
+			display: block;
+			margin-bottom: 4px;
+		}
+	}
+	&__subtitle {
+		width: 600px;
+		margin: 0 auto;
+		margin: 15px auto 72px auto;
+		p {
+			font-style: 16px;
+			font-family: 'Montserrat', serif;
+			font-weight: 300;
+		}
+	}
+	&__button {
+		padding: 18px 39px 16px 39px;
+		background-color: #998675;
+		margin-top: 20px;
+		color: #fff;
+		font-weight: 800;
+		font-size: 14px;
+		text-decoration: none;
+		font-family: 'Raleway', serif;
+		text-transform: uppercase;
+		border-radius: 4px;
+	}
 
 }
+
+
+
+
 
 
 @media (max-width:890px){
 	body.lock {
 		overflow: hidden;
 	}
-	.header__body {
-		height: 30px;
-	}	
-	.header__row {
-		height: 60px;
-	}
-	.header__burger {
-		display: block;
-		width: 30px;
-		height: 20px;
-		position: fixed;
-		right: 25px;
-		z-index: 3;
-	}
 
-	.header__burger span{ /*создаем полоску по середине*/
-		background-color: #fff;
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		top: 9px;
-		transition: all 0.3s ease 0s;
-	}
-
-	.header__burger:before, /*линии бургера меню*/
-	.header__burger:after{
-		content: '';
-		background-color: #fff;
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		left: 0;	
-		transition: all 0.3s ease 0s;
-	}
-	.header__burger:before{ /*прижимаем верхнюю полоску вверх*/
-		top: 0;
-	}
-	.header__burger:after{ /*прижимаем нижнюю полоску вниз*/
-		bottom: 0;
-	}
-
-	.header__burger.active:before{ /*.active это из JS файлы, т.е. что будет происходить когда добавляется класс active элементу и делаем из бургера крестик*/
-		transform: rotate(45deg); /*поварачиваем верхнюю палку на 45 градусов*/
-		top: 9px;
-	}
-
-	.header__burger.active:after{
-		transform: rotate(-45deg); /*поварачиваем нижнюю палку на 45 градусов*/
-		bottom: 9px;
-	}
-
-	.header__burger.active span { /*убираем среднюю палочку при добавление класса active*/
-		transform: scale(0);
-	}
-
-	.header__menu { /*фиксируем и делаем фон для открытого меню бургера*/
-		position: fixed;
-		top: -120%; /*сначала мы пишем top:0, но потом чтобы меню появлялось сверху плавно то пишем уже top:-100%;*/
-		left: 0;
-		width: 100%;
-		height: 100%;
-		overflow: auto; /*если в меню много слов/строк и т.д. то будет скролл*/
-		transition: all 0.3s ease 0s;
-		background-color: rgba(0, 0, 0, 0.8);
-		padding: 70px 10px 20px 10px; /*спускает навигацию вниз*/
-	}
-
-	.header__menu.active {
-		top: 0;
-	}
-
-	.header__list {
-		display: block; /*отключаем display: flex и навигация размещается в столбец*/
-		text-align: center;
-	}
-	.header__list li {
-		margin: 0px 0px 20px 0px;
-		padding: 4px 0px;
-		&:nth-child(10):active {
-			display: none;
+	.header {
+		// top: 0;
+		// bottom: 0;
+		&__body {
+			height: 30px;
+		}	
+		&__row {
+			height: 60px;
 		}
-	}
-
-	.header__link {
-		font-size: 24px;
-	}
-	.header__form {
-		display: block;
-		position: relative;
-		width: 300px;
-		margin: 0 auto;
-		& input {
+		&__burger {
+			display: block;
+			width: 30px;
+			height: 20px;
+			position: fixed;
+			right: 25px;
+			z-index: 3;
+		}
+		&__burger span{ /*создаем полоску по середине*/
+			background-color: #fff;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+		&__burger:before, /*линии бургера меню*/
+		&__burger:after{
+			content: '';
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;	
+			transition: all 0.3s ease 0s;
+		}
+		&__burger:before{ /*прижимаем верхнюю полоску вверх*/
+			top: 0;
+		}
+		&__burger:after{ /*прижимаем нижнюю полоску вниз*/
+			bottom: 0;
+		}
+		&__burger.active:before{ /*.active это из JS файлы, т.е. что будет происходить когда добавляется класс active элементу и делаем из бургера крестик*/
+			transform: rotate(45deg); /*поварачиваем верхнюю палку на 45 градусов*/
+			top: 9px;
+		}
+		&__burger.active:after{
+			transform: rotate(-45deg); /*поварачиваем нижнюю палку на 45 градусов*/
+			bottom: 9px;
+		}
+		&__burger.active span { /*убираем среднюю палочку при добавление класса active*/
+			transform: scale(0);
+		}
+		&__menu { /*фиксируем и делаем фон для открытого меню бургера*/
+			position: fixed;
+			top: -120%; /*сначала мы пишем top:0, но потом чтобы меню появлялось сверху плавно то пишем уже top:-100%;*/
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto; /*если в меню много слов/строк и т.д. то будет скролл*/
+			transition: all 0.3s ease 0s;
+			background-color: rgba(0, 0, 0, 0.8);
+			padding: 70px 10px 20px 10px; /*спускает навигацию вниз*/
+		}
+		&__menu.active {
+			top: 0;
+		}
+		&__list {
+			display: block; /*отключаем display: flex и навигация размещается в столбец*/
+			text-align: center;
+			& li {
+				margin: 0px 0px 16px 0px;
+				padding: 4px 0px;
+				&:nth-child(10) {
+					display: none;
+				}
+			}
+		}
+		&__link {
+			font-size: 24px;
+		}
+		&__form {
+			display: block;
+			position: relative;
+			width: 300px;
+			margin: 0 auto;
+			& input {
+				color: #fff;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		&__input {
+			padding: 10px 20px;
+			color: #000;
+			background-color: #000;
+			// border: 1px solid #fff;
+			border: none;
+			border-radius: 10px;
+			user-select: none;
+		}
+		&__input-button {
+			padding: 10px;
 			color: #fff;
+			border-radius: 10px;
+			background-color: #998675;
+			border: none;
 		}
 	}
-	.header__input {
-		padding: 10px 20px;
-		color: #000;
-		background-color: #000;
-		// border: 1px solid #fff;
-		border: none;
-		border-radius: 10px;
-	}
-	.header__button {
-		padding: 10px;
-		color: #fff;
-		border-radius: 10px;
-		background-color: #998675;
-		border: none;
+}
+
+@media (max-width:360px){
+	.header {
+		&__input {
+			width: 100px;
+		}
 	}
 }
 

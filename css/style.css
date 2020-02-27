@@ -74,6 +74,44 @@
     color: #fff; }
   .header__form {
     display: none; }
+  .header__content {
+    position: relative;
+    top: 265px; }
+    .header__content .contain {
+      width: 800px;
+      margin: 0 auto; }
+  .header__text {
+    text-align: center;
+    color: #fff; }
+  .header__title h1 {
+    font-family: 'Raleway', serif;
+    font-size: 52px;
+    font-weight: 800;
+    margin: 0; }
+  .header__title span {
+    font-size: 36px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px; }
+  .header__subtitle {
+    width: 600px;
+    margin: 0 auto;
+    margin: 15px auto 72px auto; }
+    .header__subtitle p {
+      font-style: 16px;
+      font-family: 'Montserrat', serif;
+      font-weight: 300; }
+  .header__button {
+    padding: 18px 39px 16px 39px;
+    background-color: #998675;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Raleway', serif;
+    text-transform: uppercase;
+    border-radius: 4px; }
 
 @media (max-width: 890px) {
   body.lock {
@@ -100,8 +138,7 @@
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
-  .header__burger:before,
-  .header__burger:after {
+  .header__burger:before, .header__burger:after {
     content: '';
     background-color: #fff;
     position: absolute;
@@ -157,11 +194,11 @@
     display: block;
     /*отключаем display: flex и навигация размещается в столбец*/
     text-align: center; }
-  .header__list li {
-    margin: 0px 0px 20px 0px;
-    padding: 4px 0px; }
-    .header__list li:nth-child(10):active {
-      display: none; }
+    .header__list li {
+      margin: 0px 0px 16px 0px;
+      padding: 4px 0px; }
+      .header__list li:nth-child(10) {
+        display: none; }
   .header__link {
     font-size: 24px; }
   .header__form {
@@ -171,18 +208,28 @@
     margin: 0 auto; }
     .header__form input {
       color: #fff; }
+      .header__form input:focus {
+        outline: none; }
   .header__input {
     padding: 10px 20px;
     color: #000;
     background-color: #000;
     border: none;
-    border-radius: 10px; }
-  .header__button {
+    border-radius: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .header__input-button {
     padding: 10px;
     color: #fff;
     border-radius: 10px;
     background-color: #998675;
     border: none; } }
+
+@media (max-width: 360px) {
+  .header__input {
+    width: 100px; } }
 
 .wrapper {
   overflow: hidden;
@@ -207,3 +254,8 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover; }
+
+.benefits__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
