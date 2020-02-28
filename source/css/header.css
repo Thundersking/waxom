@@ -99,17 +99,18 @@
       font-style: 16px;
       font-family: 'Montserrat', serif;
       font-weight: 300; }
-  .header__button {
-    padding: 18px 39px 16px 39px;
-    background-color: #998675;
-    margin-top: 20px;
-    color: #fff;
-    font-weight: 800;
-    font-size: 14px;
-    text-decoration: none;
-    font-family: 'Raleway', serif;
-    text-transform: uppercase;
-    border-radius: 4px; }
+
+.button {
+  padding: 18px 39px 16px 39px;
+  background-color: #998675;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: 'Raleway', serif;
+  text-transform: uppercase;
+  border-radius: 4px; }
 
 @media (max-width: 890px) {
   body.lock {

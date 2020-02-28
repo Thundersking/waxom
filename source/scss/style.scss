@@ -3,6 +3,13 @@
 @import "mixins.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800&display=swap');
 
+body {
+	font-family: 'Montserrat', serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #8c8c8c;
+}
+
 .wrapper {
 	overflow: hidden;
 	min-height: 100%;
@@ -31,17 +38,158 @@
 	}
 }
 
+h2 {
+	font-size: 30px;
+	font-family: 'Raleway', serif;
+	font-weight: 600;
+	color: #555555;
+	margin: 0 auto;
+}
+
 //==============================================================
 .page {
-	&__benefits {}
+	&__benefits {
+		padding: 50px 0;
+	}
 }
 .benefits {
 	&__row {
 		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		text-align: center;
 	}
-	&__item {}
-	&__title {}
-	&__subtitle {}
+	&__item {
+		max-width: 270px;
+		position: relative;
+		padding: 0px 0px 25px 0px;
+		margin: 30px 0;
+		&:after {
+			content: '';
+			background-color: #f1eee9;
+			height: 3px;
+			width: 70px;
+			position: absolute;
+			left: 57%;
+			margin: 0px 0px 0px -52.5px;
+			bottom: 0;
+		}
+		svg {
+			width: 43px;
+			fill: #555555;
+		}
+		&:hover svg{
+			fill: #c7b299;
+			transition: 0.6s;
+		}
+		&:hover h4{
+			color: #c7b299;
+			transition: 0.6s;
+		}
+		&:hover:after{
+			background-color: #c7b299;
+			transition: 0.6s;
+		}
+	}
+	&__title {
+		font-size: 22px;
+		color: #555555;
+	}
+	&__subtitle {
+		line-height: 26px;
+	}
 }
 
+//==============================================================
+
+.page {
+	&__ideas {
+		background-color: #fbfaf8;
+	}
+}
+.ideas {
+	&__item {
+		text-align: center;
+	}
+	&__title {
+		margin-bottom: 24px;
+		padding-top: 84px;
+	}
+	&__subtitle {
+		width: 760px;
+		margin: 0 auto;
+		font-size: 16px;
+		line-height: 28px;
+	}
+	&__photo {
+		display: flex;
+		margin-top: 40px;
+		padding-bottom: 0;
+		img {
+			
+		}
+		&_left {
+			position: relative;
+			top: 82px;
+			height: 400px;
+		}
+		&_center {
+			position: relative;
+			left: -565px;
+			z-index: 5;
+		}
+		&_right {
+			position: relative;
+			z-index: 2;
+			height: 400px;
+			left: -1130px;
+			top: 82px;
+		}
+	}
+}
+
+
+//==============================================================
+
+.page {
+	&__purchase {
+		background: rgb(33,27,25);
+		background: -webkit-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 51%, rgba(78,52,39,1) 100%);
+		background: -o-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 51%, rgba(78,52,39,1) 100%);
+		background: linear-gradient(to right, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 51%, rgba(78,52,39,1) 100%);
+	}
+}
+.container {
+}
+.purchase {
+	&__body {
+		width: 1100px;
+		margin: 0 auto;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__text {}
+	&__title {
+		font-size: 28px;
+		color: #fff;
+		font-family: 'Raleway', serif;
+		font-weight: 400;
+		span {
+			color: #c7b299;
+		}
+	}
+	&__subtitle {
+		font-size: 18px;
+		color: #615855;
+	}
+	&__button {}
+}
+
+
+
+//==============================================================
+//==============================================================
+//==============================================================
 //==============================================================
