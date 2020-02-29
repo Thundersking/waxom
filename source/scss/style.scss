@@ -1,4 +1,4 @@
-@import "nullstyle.css";
+@import "nullstyle.scss";
 @import "header.scss";
 @import "mixins.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800&display=swap');
@@ -157,6 +157,7 @@ h2 {
 		background: -webkit-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 51%, rgba(78,52,39,1) 100%);
 		background: -o-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 51%, rgba(78,52,39,1) 100%);
 		background: linear-gradient(to right, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 51%, rgba(78,52,39,1) 100%);
+		height: 150px;
 	}
 }
 .container {
@@ -165,10 +166,13 @@ h2 {
 	&__body {
 		width: 1100px;
 		margin: 0 auto;
+		position: relative;
+		top: 10px;
 	}
 	&__row {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__text {}
 	&__title {
@@ -184,12 +188,112 @@ h2 {
 		font-size: 18px;
 		color: #615855;
 	}
+	&__button {
+		height: 18px;
+	}
+}
+//==============================================================
+
+.page {
+	&__project {}
+}
+.container {
+}
+.project {
+	&__body {}
+	&__text {
+		padding: 50px 0;
+	}
+	&__title {}
+	&__subtitle {}
+	&__item {}
+	&__toggle {
+		&_list {
+			li {
+				list-style-type: none;
+				display: inline-block;
+				a {
+					margin: 1px;
+					padding: .5em;
+					background-color: lightgray;
+					border-radius: 7px 7px 0 0;
+					&act {
+						background-color: pink;
+					}
+				}
+			}
+		}
+	}
 	&__button {}
 }
+.act {
+}
+.tab {
+}
+.content-project {
+	flex: 0 1 33.333%;
+	margin-top: 10px;
+	&:hover &__img {
+		background: #000;
+		img {
+			opacity: 0.5;
+		}
+		svg {
+			display: block;
+		}
+	}
+	&:hover &__text {
+		background-color: #362f2d;
+	}
+	&:hover &__title {
+		color: #fff;
+	}
+	&:hover &__subtitle {
+		color: #c7b299;
+	}
+	&__img {
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		img {
+			transition: 1s;
+			display: block;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__scale {
+	}
+	&__text {
+		background-color: #fbfaf8;
+		width: 370px;
+		height: 100px;
+		margin-top: -2px;
+		transition: 1s;
+		padding: 29px 0 0 29px;
+	}
+	&__title {
+		font-size: 20px;
+		font-family: 'Raleway', serif;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	&__subtitle {
+		font-size: 14px;
+	}
+}
 
-
+#project__content .tab {
+	display: none;
+}
+#project__content .tab.act {
+	display: block;
+	display: flex;
+	flex-wrap: wrap;
+}
 
 //==============================================================
-//==============================================================
+
 //==============================================================
 //==============================================================
