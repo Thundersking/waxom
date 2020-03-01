@@ -300,7 +300,7 @@ body {
   min-height: 100%; }
 
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
   padding: 0px 15px;
   margin: 0px auto; }
 
@@ -459,24 +459,57 @@ h2 {
   height: 18px; }
 
 .project__text {
-  padding: 50px 0; }
+  padding: 50px 0;
+  text-align: center;
+  padding: 78px 0 46px 0; }
+
+.project__title {
+  margin-bottom: 18px; }
+
+.project__subtitle {
+  width: 762px;
+  margin: 0 auto;
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 27px; }
 
 .project__toggle_list li {
   list-style-type: none;
   display: inline-block; }
   .project__toggle_list li a {
-    margin: 1px;
-    padding: .5em;
-    background-color: lightgray;
-    border-radius: 7px 7px 0 0; }
+    margin-right: 8px;
+    padding: 0.5em 1.9em;
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
+    color: #8c8c8c; }
+    .project__toggle_list li a:hover {
+      background-color: #998675;
+      border: 1px solid #998675;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      color: #fff; }
     .project__toggle_list li aact {
       background-color: pink; }
 
+.project__button {
+  margin: 0 auto;
+  padding: 17px 46px 16px 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 48px;
+  width: 171px; }
+
 .content-project {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 33.333%;
-  flex: 0 1 33.333%;
-  margin-top: 10px; }
+  -ms-flex: 0 1 33%;
+  flex: 0 1 33%;
+  padding: 0 15px;
+  margin: 0 0 30px 0; }
   .content-project:hover .content-project__img {
     background: #000; }
     .content-project:hover .content-project__img img {
@@ -519,6 +552,10 @@ h2 {
   .content-project__subtitle {
     font-size: 14px; }
 
+#project__content {
+  margin-top: 48px;
+  margin-bottom: 11px; }
+
 #project__content .tab {
   display: none; }
 
@@ -528,4 +565,9 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0 -15px; }
+
+nav#project__toggle {
+  margin: 0 auto;
+  width: 680px; }
