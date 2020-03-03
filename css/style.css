@@ -571,3 +571,61 @@ h2 {
 nav#project__toggle {
   margin: 0 auto;
   width: 680px; }
+
+.presentation__icon {
+  background: url("../../img/play.png") no-repeat center;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto; }
+
+.presentation__body {
+  min-height: 705px;
+  text-align: center;
+  width: 100%;
+  display: table;
+  background: url("../../img/video-presentation.jpg") no-repeat center;
+  background-size: cover; }
+
+.presentation__item {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff; }
+
+.presentation__title {
+  color: #fff;
+  margin-top: 44px;
+  margin-bottom: 30px; }
+
+.presentation__subtitle {
+  margin-top: 10px;
+  max-width: 561px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 25px; }
+
+.presentation__time {
+  margin-top: 42px;
+  color: #c7b299;
+  font-size: 14px; }
+
+.app__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.app__title {
+  margin: 196px 0 40px 0; }
+
+.app__subtitle {
+  font-size: 16px;
+  line-height: 28px; }
+
+.app__item {
+  margin-top: 40px; }
+
+.app__link {
+  line-height: 30px; }
+  .app__link:after {
+    background-image: url("../../img/arrow.png");
+    width: 50px;
+    height: 50px; }

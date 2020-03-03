@@ -331,5 +331,85 @@ nav#project__toggle {
 
 //==============================================================
 
+.page {
+	&__presentation {}
+}
+.presentation {
+	&__icon {
+		background: url("../../img/play.png") no-repeat center;
+		height: 100px;
+		width: 100px;
+		margin: 0 auto;
+	}
+	&__body {
+		min-height: 705px;
+		text-align: center;
+		width: 100%;
+		display: table;
+		background: url("../../img/video-presentation.jpg") no-repeat center;
+		background-size: cover;
+	}
+	&__item {
+		display: table-cell;
+		vertical-align: middle;
+		color: #fff;
+	}
+	&__title {
+		color: #fff;
+		margin-top: 44px;
+		margin-bottom: 30px;
+	}
+	&__subtitle {
+		margin-top: 10px;
+		max-width: 561px;
+		margin: 0 auto;
+		font-size: 16px;
+		line-height: 25px
+	}
+	&__time {
+		margin-top: 42px;
+		color: #c7b299;
+		font-size: 14px;
+	}
+}
+
+//==============================================================
+
+.page {
+	&__app {}
+}
+.container {
+}
+.app {
+	&__row {
+		display: flex;
+	}
+	&__body {}
+	&__photo {}
+	&__text {}
+	&__title {
+		margin: 196px 0 40px 0;
+	}
+	&__subtitle {
+		font-size: 16px;
+		line-height: 28px;
+	}
+	&__item {
+		margin-top: 40px;
+	}
+	&__link {
+		line-height: 30px;
+		&:after {
+			background-image: url('../../img/arrow.png');
+			width: 50px;
+			height: 50px;
+		}
+	}
+}
+
+
+//==============================================================
+//==============================================================
+//==============================================================
 //==============================================================
 //==============================================================
