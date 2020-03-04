@@ -613,19 +613,77 @@ nav#project__toggle {
   display: -ms-flexbox;
   display: flex; }
 
+.app__body {
+  padding: 83px 0 0 0; }
+
 .app__title {
-  margin: 196px 0 40px 0; }
+  margin: 113px 0 28px 0; }
 
 .app__subtitle {
   font-size: 16px;
-  line-height: 28px; }
+  line-height: 28px;
+  max-width: 666px; }
 
 .app__item {
-  margin-top: 40px; }
+  margin: 30px 0 0 50px; }
 
 .app__link {
-  line-height: 30px; }
-  .app__link:after {
+  position: relative;
+  line-height: 32px;
+  letter-spacing: 1px;
+  padding-left: 50px; }
+  .app__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
     background-image: url("../../img/arrow.png");
-    width: 50px;
-    height: 50px; }
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    margin-right: -10px; }
+
+.page__statistics {
+  background: #211b19;
+  background: -webkit-linear-gradient(left, #211b19 0%, #4e3427 100%);
+  background: -o-linear-gradient(left, #211b19 0%, #4e3427 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+  padding: 70px 0px 80px 0px; }
+
+.statistics__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 116px; }
+
+.statistics__item {
+  text-align: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 15%;
+  flex: 0 1 15%; }
+
+.statistics__number {
+  margin: 22px 0 13px 0;
+  font-size: 48px;
+  font-weight: 100;
+  color: #fff; }
+
+.statistics__desc {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #c7b299;
+  position: relative; }
+  .statistics__desc::after {
+    content: '';
+    background-color: #f1eee9;
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    left: 39.5%;
+    bottom: 0;
+    top: 42px; }

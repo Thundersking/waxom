@@ -46,3 +46,9 @@ document.addEventListener('DOMContentLoaded', function(e){
         })
     })
 })
+
+
+
+$(".statistics__number").counterUp({delay:1,time:500});
+
+

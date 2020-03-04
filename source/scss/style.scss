@@ -384,31 +384,93 @@ nav#project__toggle {
 	&__row {
 		display: flex;
 	}
-	&__body {}
+	&__body {
+		padding: 83px 0 0 0;
+	}
 	&__photo {}
 	&__text {}
 	&__title {
-		margin: 196px 0 40px 0;
+		margin: 113px 0 28px 0;
 	}
 	&__subtitle {
 		font-size: 16px;
 		line-height: 28px;
+		max-width: 666px;
 	}
 	&__item {
-		margin-top: 40px;
+		margin: 30px 0 0 50px;
 	}
 	&__link {
-		line-height: 30px;
-		&:after {
+		position: relative;
+		line-height: 32px;
+		letter-spacing: 1px;
+		padding-left: 50px;
+		&::after {
+			content:'';
+			position: absolute;
+			left: 0;
+			    top: 5px;
 			background-image: url('../../img/arrow.png');
-			width: 50px;
-			height: 50px;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 21px;
+			height: 21px;
+			margin-right: -10px;
 		}
 	}
 }
 
 
 //==============================================================
+
+.page {
+	&__statistics {
+		background: rgb(33,27,25);
+		background: -webkit-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
+		background: -o-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
+		background: linear-gradient(to right, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
+		padding: 70px 0px 80px 0px;
+	}
+}
+.statistics {
+	&__body {
+		
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 116px;
+	}
+	&__item {
+		text-align: center;
+		flex: 0 1 15%;
+	}
+	&__image {}
+	&__number {
+		margin: 22px 0 13px 0;
+		font-size: 48px;
+		font-weight: 100;
+		color: #fff;
+	}
+	&__desc {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #c7b299;
+		position: relative;
+		&::after {
+			content: '';
+			background-color: #f1eee9;
+			height: 2px;
+			width: 30px;
+			position: absolute;
+			left: 39.5%;
+			bottom: 0;
+			top: 42px;
+		}
+	}
+}
+
+
 //==============================================================
 //==============================================================
 //==============================================================
