@@ -472,6 +472,63 @@ nav#project__toggle {
 
 
 //==============================================================
+
+.page {
+	&__posts {}
+}
+.conteiner {
+}
+.posts {
+	&__body {}
+	&__text {}
+	&__title {}
+	&__subtitle {}
+	&__slider {
+
+	}
+}
+.slider {
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		flex: 0 1 31%;
+		position: relative;
+		border: 1px solid #f8f8f8;
+	}
+	&__time {
+		position: absolute;
+		color: #fff;
+		top: 10px;
+		left: 10px;
+		text-align: center;
+		font-size: 24px;
+	}
+	&__day {
+		background-color: #363636;
+		padding: 8px 10px 8px 10px;
+		border-radius: 4px 4px 0 0;
+	}
+	&__month {
+		font-size: 14px;
+		background-color: #252525;
+		padding: 8px 10px 8px 10px;
+		border-radius: 0 0 4px 4px;
+	}
+	&__images {}
+	&__text {}
+	&__title {}
+	&__subtitle {}
+	&__button {}
+	&__control {
+		&_left {}
+		&_right {}
+		&_show {}
+	}
+}
+
+
 //==============================================================
 //==============================================================
 //==============================================================
