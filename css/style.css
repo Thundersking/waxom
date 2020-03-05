@@ -688,6 +688,17 @@ nav#project__toggle {
     bottom: 0;
     top: 42px; }
 
+.posts__text {
+  width: 777px;
+  text-align: center;
+  margin: 78px auto 33px; }
+
+.posts__subtitle {
+  margin-top: 18px;
+  line-height: 28px;
+  font-size: 16px;
+  letter-spacing: -0.1px; }
+
 .slider__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -702,22 +713,78 @@ nav#project__toggle {
   flex: 0 1 31%;
   position: relative;
   border: 1px solid #f8f8f8; }
+  .slider__item:hover {
+    background-color: #362f2d;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+  .slider__item:hover h3 {
+    color: #c7b299;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+  .slider__item:hover .slider__day {
+    background-color: #c7b299;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+  .slider__item:hover .slider__month {
+    background-color: #a48d72;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+  .slider__item:hover .slider__images {
+    background-image: #000;
+    opacity: 0.5;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
 
 .slider__time {
   position: absolute;
   color: #fff;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 19px;
   text-align: center;
-  font-size: 24px; }
+  font-size: 24px;
+  z-index: 2; }
 
 .slider__day {
   background-color: #363636;
-  padding: 8px 10px 8px 10px;
+  padding: 6px 10px 6px 11px;
   border-radius: 4px 4px 0 0; }
 
 .slider__month {
-  font-size: 14px;
+  font-size: 12px;
   background-color: #252525;
-  padding: 8px 10px 8px 10px;
-  border-radius: 0 0 4px 4px; }
+  padding: 4px 9px 8px 11px;
+  border-radius: 0 0 4px 4px;
+  letter-spacing: -0.2px; }
+
+.slider__text {
+  padding: 28px 22px 67px 28px; }
+
+.slider__title {
+  font-size: 20px;
+  font-family: 'Raleway', serif;
+  font-weight: 500; }
+
+.slider__subtitle {
+  margin-top: 15px;
+  line-height: 22px;
+  letter-spacing: -0.1px; }
+
+.slider__button {
+  margin-top: 24px;
+  display: block;
+  position: absolute;
+  color: #c7b299; }
+  .slider__button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 1px;
+    left: 84px;
+    background: url("../../img/arrow-right.png") no-repeat;
+    width: 10px;
+    height: 10px; }
