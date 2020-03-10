@@ -6,6 +6,7 @@ $('.icon-menu').click(function(event) {
 	$('body').toggleClass('lock');
 });
 
+//==============================================================
 
 function ibg(){
 	$.each($('.ibg'), function(index, val) {
@@ -16,6 +17,7 @@ function ibg(){
 }
 ibg();
 
+//==============================================================
 
 $(document).ready(function() {
 	$('.header__burger').click(function(event) {
@@ -24,6 +26,7 @@ $(document).ready(function() {
 	});
 });
 
+//==============================================================
 
 document.addEventListener('DOMContentLoaded', function(e){
     'use strict';
@@ -47,8 +50,17 @@ document.addEventListener('DOMContentLoaded', function(e){
     })
 })
 
-
+//==============================================================
 
 $(".statistics__number").counterUp({delay:1,time:500});
 
+//==============================================================
+
+$(document).ready(function(){
+    $('.slider').slick({
+         infinite: true,
+         slidesToShow: 3,
+         slidesToScroll: 1
+    })
+});
 

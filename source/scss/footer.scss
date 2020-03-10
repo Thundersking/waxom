@@ -1,0 +1,77 @@
+.footer {
+	&__body {
+		background-color: #191919;
+	}
+	&__item {
+		display: flex;
+		padding: 80px 0;
+	}
+	&__logo {
+		width: 341px;
+		p {
+			margin: 24px 0;
+			line-height: 24px;
+		}
+		a {
+			color: #fff;
+			font-size: 14px;
+			margin-top: 20px;
+		}
+	}
+	&__column {
+		
+		width: 406px;
+		padding: 25px 0px 0 41px;
+		h3 {
+			font-size: 24px;
+			color: #fff;
+		}
+	}
+	&__posts {
+		margin: 25px 0 21px;
+		time {
+			font-size: 12px;
+			font-weight: 100;
+			color: #404040;
+		}
+		a {
+			display: block;
+			color: #555555;
+			margin-top: 10px;
+		}
+	}
+	&__twitter {
+		margin: 22px 0 21px;
+		p {
+			margin-bottom: 20px;
+			color: #555555;
+			line-height: 20px;
+		}
+		time {
+			font-size: 12px;
+			font-weight: 100;
+			color: #404040;
+		}
+		a {
+			color: #00bff3;
+			margin-top: 10px;
+		}
+	}
+	&__widget {
+		width: 400px;
+		padding-left: 34px;
+		padding-top: 25px;
+		h3 {
+			font-size: 24px;
+			color: #fff;
+			margin-bottom: 27px;
+		}
+	}
+	&__image {
+		margin: 0 -8px;
+		img {
+			padding: 4px 2px;
+		}
+	}
+}
+
