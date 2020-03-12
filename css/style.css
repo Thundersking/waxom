@@ -78,7 +78,13 @@ h1, h2, h3, h4, h5, h6 {
   .header__logo {
     position: relative;
     right: 0;
-    top: 0; }
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .header__logo img {
       max-width: 100%; }
       @media (max-width: 967px) {
@@ -296,21 +302,45 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px 0; }
+  padding: 80px 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
-.footer__logo {
-  width: 361px; }
-  .footer__logo p {
+.footer__desc {
+  -ms-flex-preferred-size: 24%;
+  flex-basis: 24%; }
+  .footer__desc p {
     margin: 24px 0;
     line-height: 24px; }
-  .footer__logo a {
+  .footer__desc a {
     color: #fff;
     font-size: 14px;
     margin-top: 20px; }
 
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .footer__logo:after {
+    content: 'Waxom';
+    font-size: 34px;
+    vertical-align: 35%;
+    font-family: 'Raleway', serif;
+    font-weight: 400;
+    color: #fff; }
+    @media (max-width: 967px) {
+      .footer__logo:after {
+        font-size: 20px;
+        vertical-align: 70%; } }
+
 .footer__column {
-  width: 366px;
-  padding: 25px 0px 0 0px; }
+  -ms-flex-preferred-size: 24%;
+  flex-basis: 24%;
+  padding: 25px 0px 0 2px; }
   .footer__column h3 {
     margin-bottom: 26px;
     font-size: 24px;
@@ -372,18 +402,24 @@ h1, h2, h3, h4, h5, h6 {
     content: none; }
 
 .footer__widget {
-  width: 400px;
-  padding-left: 34px;
-  padding-top: 25px; }
+  padding-top: 25px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: 23.59%;
+  flex-basis: 23.59%; }
   .footer__widget h3 {
     font-size: 24px;
     color: #fff;
     margin-bottom: 23px; }
 
 .footer__image {
-  margin: 0 -4px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   .footer__image img {
-    padding: 5px 4px; }
+    padding: 4px 4px; }
 
 .twitter__header {
   margin-bottom: 22px !important; }

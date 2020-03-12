@@ -5,9 +5,10 @@
 	&__item {
 		display: flex;
 		padding: 80px 0;
+		justify-content: space-between;
 	}
-	&__logo {
-		width: 361px;
+	&__desc {
+		flex-basis: 24%;
 		p {
 			margin: 24px 0;
 			line-height: 24px;
@@ -18,9 +19,25 @@
 			margin-top: 20px;
 		}
 	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		&:after {
+			content: 'Waxom';
+			font-size: 34px;
+			vertical-align: 35%;
+			font-family: 'Raleway', serif;
+			font-weight: 400;
+			color: #fff;
+			@media (max-width:967px){
+				font-size: 20px;
+				vertical-align: 70%;
+			}
+		}
+	}
 	&__column {
-		width: 366px;
-		padding: 25px 0px 0 0px;
+		flex-basis: 24%;
+		padding: 25px 0px 0 2px;
 		h3 {
 			margin-bottom: 26px;
 			font-size: 24px;
@@ -93,9 +110,9 @@
 		}
 	}
 	&__widget {
-		width: 400px;
-		padding-left: 34px;
 		padding-top: 25px;
+		flex-wrap: wrap;
+		flex-basis: 23.59%;
 		h3 {
 			font-size: 24px;
 			color: #fff;
@@ -103,9 +120,10 @@
 		}
 	}
 	&__image {
-		margin: 0 -4px;
+		display: flex;
+		flex-wrap: wrap;
 		img {
-			padding: 5px 4px;
+			padding: 4px 4px;
 		}
 	}
 }

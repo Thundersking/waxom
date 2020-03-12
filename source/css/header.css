@@ -19,7 +19,13 @@
   .header__logo {
     position: relative;
     right: 0;
-    top: 0; }
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .header__logo img {
       max-width: 100%; }
       @media (max-width: 967px) {
