@@ -55,7 +55,7 @@ h3 {
 //==============================================================
 .page {
 	&__benefits {
-		padding: 50px 0;
+		padding: 54px 0;
 	}
 }
 .benefits {
@@ -100,9 +100,13 @@ h3 {
 	&__title {
 		font-size: 22px;
 		color: #555555;
+		margin: 26px 0 15px;
+		font-family: 'Raleway', serif;
+		font-weight: 600;
+		letter-spacing: 0.2px;
 	}
 	&__subtitle {
-		line-height: 26px;
+		line-height: 24px;
 	}
 }
 
@@ -118,18 +122,21 @@ h3 {
 		text-align: center;
 	}
 	&__title {
-		margin-bottom: 24px;
-		padding-top: 84px;
+		margin-bottom: 18px;
+		padding-top: 80px;
+		letter-spacing: 0.2px;
 	}
 	&__subtitle {
 		width: 760px;
 		margin: 0 auto;
 		font-size: 16px;
 		line-height: 28px;
+		letter-spacing: -0.25px;
+		font-weight: 400;
 	}
 	&__photo {
 		display: flex;
-		margin-top: 40px;
+		margin-top: 34px;
 		padding-bottom: 0;
 		img {
 			
@@ -148,7 +155,7 @@ h3 {
 			position: relative;
 			z-index: 2;
 			height: 400px;
-			left: -1130px;
+			left: -1105px;
 			top: 82px;
 		}
 	}
@@ -166,19 +173,16 @@ h3 {
 		height: 150px;
 	}
 }
-.container {
-}
 .purchase {
 	&__body {
-		width: 1100px;
 		margin: 0 auto;
 		position: relative;
-		top: 10px;
 	}
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 150px;
 	}
 	&__text {}
 	&__title {
@@ -186,6 +190,8 @@ h3 {
 		color: #fff;
 		font-family: 'Raleway', serif;
 		font-weight: 400;
+		margin-bottom: 9px;
+		letter-spacing: 0.2px;
 		span {
 			color: #c7b299;
 		}
@@ -195,7 +201,8 @@ h3 {
 		color: #615855;
 	}
 	&__button {
-		height: 18px;
+		margin-top: inherit;
+		padding: 18px 28px 16px 28px;
 	}
 }
 //==============================================================
@@ -203,14 +210,11 @@ h3 {
 .page {
 	&__project {}
 }
-.container {
-}
 .project {
 	&__body {}
 	&__text {
-		padding: 50px 0;
 		text-align: center;
-		padding: 78px 0 46px 0;
+		padding: 78px 0 44px 0;
 	}
 	&__title {
 		margin-bottom: 18px;
@@ -228,9 +232,34 @@ h3 {
 			li {
 				list-style-type: none;
 				display: inline-block;
+				&:first-child {
+					a {
+						padding: 0.4em 1.9em;
+					}
+				}
+				&:nth-child(2) {
+					a {
+						padding: 0.4em 1.2em;
+					}
+				}
+				&:nth-child(3) {
+					a {
+						padding: 0.4em 1.4em;
+					}
+				}
+				&:nth-child(4) {
+					a {
+						padding: 0.4em 1.5em;
+					}
+				}
+				&:last-child {
+					a {
+						padding: 0.4em 1.6em;
+					}
+				}
 				a {
-					margin-right: 8px;
-					padding: 0.5em 1.9em;
+					margin-right: 6px;
+					padding: 0.4em 1em;
 					border-radius: 3px;
 					border: 1px solid #ebebeb;
 					color: #8c8c8c;
@@ -256,10 +285,7 @@ h3 {
 		width: 171px;
 	}
 }
-.act {
-}
-.tab {
-}
+
 .content-project {
 	flex: 0 1 33%;
 	padding: 0 15px;
@@ -286,6 +312,10 @@ h3 {
 		display: inline-block;
 		overflow: hidden;
 		position: relative;
+		height: 237px;
+		width: 370px;
+		background-size: cover;
+		background-position: center;
 		img {
 			transition: 1s;
 			display: block;
@@ -332,13 +362,15 @@ h3 {
 
 nav#project__toggle {
 	margin: 0 auto;
-	width: 680px;
+	width: 615px;
 }
 
 //==============================================================
 
 .page {
-	&__presentation {}
+	&__presentation {
+		padding: 81px 0;
+	}
 }
 .presentation {
 	&__icon {
@@ -356,24 +388,27 @@ nav#project__toggle {
 		background-size: cover;
 	}
 	&__item {
-		display: table-cell;
-		vertical-align: middle;
 		color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 705px;
 	}
 	&__title {
 		color: #fff;
-		margin-top: 44px;
-		margin-bottom: 30px;
+		margin-top: 42px;
+		margin-bottom: 18px;
 	}
 	&__subtitle {
 		margin-top: 10px;
 		max-width: 561px;
 		margin: 0 auto;
 		font-size: 16px;
-		line-height: 25px
+		line-height: 28px
 	}
 	&__time {
-		margin-top: 42px;
+		margin-top: 37px;
 		color: #c7b299;
 		font-size: 14px;
 	}
@@ -384,19 +419,21 @@ nav#project__toggle {
 .page {
 	&__app {}
 }
-.container {
-}
 .app {
 	&__row {
 		display: flex;
 	}
 	&__body {
-		padding: 83px 0 0 0;
 	}
-	&__photo {}
-	&__text {}
+	&__photo {
+		padding-left: 45px;
+	}
+	&__text {
+		padding-left: 27px;
+	}
 	&__title {
 		margin: 113px 0 28px 0;
+		letter-spacing: 0.15px;
 	}
 	&__subtitle {
 		font-size: 16px;
@@ -435,7 +472,7 @@ nav#project__toggle {
 		background: -webkit-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
 		background: -o-linear-gradient(left, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
 		background: linear-gradient(to right, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
-		padding: 70px 0px 80px 0px;
+		height: 300px;
 	}
 }
 .statistics {
@@ -446,6 +483,8 @@ nav#project__toggle {
 		display: flex;
 		justify-content: space-between;
 		padding: 0 116px;
+		align-items: center;
+		height: 277px;
 	}
 	&__item {
 		text-align: center;
@@ -482,7 +521,8 @@ nav#project__toggle {
 .page {
 	&__posts {}
 }
-.conteiner {
+.container__posts {
+	padding: 0 0px;
 }
 .posts {
 	&__body {}
@@ -511,7 +551,7 @@ nav#project__toggle {
 		flex: 0 1 31%;
 		position: relative;
 		border: 1px solid #f8f8f8;
-		margin: 0 10px;
+		margin: 0 12px;
 		&:hover {
 			background-color: #362f2d;
 			transition: 0.5s;
@@ -557,7 +597,7 @@ nav#project__toggle {
 	}
 	&__images {
 		img {
-			width: 369px;
+			width: 374px;
 		}
 	}
 	&__text {
@@ -633,10 +673,18 @@ nav#project__toggle {
 .slider .slick-arrow.slick-prev{
 	left: 47.8%;
 	background: url('../img/svg/slider-arrow__left.svg') 0 0 / 100% no-repeat;
+	&:hover {
+		background: url('../img/svg/slider-arrow__left_color.svg') 0 0 / 100% no-repeat;
+		transition: 0.5s;
+	}
 }
 .slider .slick-arrow.slick-next{
 	right: 47.8%;
 	background: url('../img/svg/slider-arrow__right.svg') 0 0 / 100% no-repeat;
+	&:hover {
+		background: url('../img/svg/slider-arrow__right_color.svg') 0 0 / 100% no-repeat;
+		transition: 0.5s;
+	}
 }
 
 .slider .slick-dots{
