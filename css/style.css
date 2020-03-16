@@ -764,6 +764,9 @@ h3 {
   background: -webkit-gradient(linear, left top, right top, from(#211b19), color-stop(51%, #382820), to(#4e3427));
   background: linear-gradient(to right, #211b19 0%, #382820 51%, #4e3427 100%);
   height: 150px; }
+  @media (max-width: 600px) {
+    .page__purchase {
+      height: 180px; } }
 
 .purchase__body {
   margin: 0 auto;
@@ -780,6 +783,22 @@ h3 {
   -ms-flex-align: center;
   align-items: center;
   height: 150px; }
+  @media (max-width: 600px) {
+    .purchase__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 180px; } }
+
+@media (max-width: 600px) {
+  .purchase__text {
+    margin-bottom: 15px;
+    max-width: 381px;
+    text-align: center; } }
 
 .purchase__title {
   font-size: 28px;
@@ -790,10 +809,26 @@ h3 {
   letter-spacing: 0.2px; }
   .purchase__title span {
     color: #c7b299; }
+  @media (max-width: 769px) {
+    .purchase__title {
+      font-size: 20px; } }
+  @media (max-width: 410px) {
+    .purchase__title {
+      font-size: 18px;
+      max-width: 200px;
+      margin: 0 auto 10px;
+      line-height: 22px; } }
 
 .purchase__subtitle {
   font-size: 18px;
   color: #615855; }
+  @media (max-width: 769px) {
+    .purchase__subtitle {
+      font-size: 14px; } }
+  @media (max-width: 410px) {
+    .purchase__subtitle {
+      font-size: 12px;
+      max-width: 309px; } }
 
 .purchase__button {
   margin-top: inherit;
@@ -807,40 +842,51 @@ h3 {
   margin-bottom: 18px; }
 
 .project__subtitle {
-  width: 762px;
+  max-width: 762px;
   margin: 0 auto;
   font-size: 16px;
   letter-spacing: -0.1px;
   line-height: 27px; }
 
-.project__toggle_list li {
-  list-style-type: none;
-  display: inline-block; }
-  .project__toggle_list li:first-child a {
-    padding: 0.4em 1.9em; }
-  .project__toggle_list li:nth-child(2) a {
-    padding: 0.4em 1.2em; }
-  .project__toggle_list li:nth-child(3) a {
-    padding: 0.4em 1.4em; }
-  .project__toggle_list li:nth-child(4) a {
-    padding: 0.4em 1.5em; }
-  .project__toggle_list li:last-child a {
-    padding: 0.4em 1.6em; }
-  .project__toggle_list li a {
-    margin-right: 6px;
-    padding: 0.4em 1em;
-    border-radius: 3px;
-    border: 1px solid #ebebeb;
-    color: #8c8c8c; }
-    .project__toggle_list li a:hover {
-      background-color: #998675;
-      border: 1px solid #998675;
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;
-      color: #fff; }
-    .project__toggle_list li aact {
-      background-color: pink; }
+.project__item {
+  width: 100%; }
+
+.project__toggle_list {
+  text-align: center; }
+  .project__toggle_list li {
+    list-style-type: none;
+    display: inline-block; }
+    .project__toggle_list li:first-child a {
+      padding: 0.4em 1.9em; }
+    @media (max-width: 768px) {
+      .project__toggle_list li:first-child {
+        margin-bottom: 28px; } }
+    .project__toggle_list li:nth-child(2) a {
+      padding: 0.4em 1.2em; }
+    .project__toggle_list li:nth-child(3) a {
+      padding: 0.4em 1.4em; }
+    @media (max-width: 369px) {
+      .project__toggle_list li:nth-child(3) {
+        margin-bottom: 28px; } }
+    .project__toggle_list li:nth-child(4) a {
+      padding: 0.4em 1.5em; }
+    .project__toggle_list li:last-child a {
+      padding: 0.4em 1.6em; }
+    .project__toggle_list li a {
+      margin-right: 6px;
+      padding: 0.4em 1em;
+      border-radius: 3px;
+      border: 1px solid #ebebeb;
+      color: #8c8c8c; }
+      .project__toggle_list li a:hover {
+        background-color: #998675;
+        border: 1px solid #998675;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        color: #fff; }
+      .project__toggle_list li aact {
+        background-color: pink; }
 
 .project__button {
   margin: 0 auto;
@@ -907,8 +953,14 @@ h3 {
     font-size: 14px; }
 
 #project__content {
-  margin-top: 48px;
-  margin-bottom: 11px; }
+  margin: 48px auto 11px;
+  width: 100%; }
+  @media (max-width: 1199px) {
+    #project__content {
+      max-width: 770px; } }
+  @media (max-width: 799px) {
+    #project__content {
+      max-width: 370px; } }
 
 #project__content .tab {
   display: none; }
@@ -924,7 +976,10 @@ h3 {
 
 nav#project__toggle {
   margin: 0 auto;
-  width: 615px; }
+  max-width: 615px; }
+  @media (max-width: 768px) {
+    nav#project__toggle {
+      max-width: 340px; } }
 
 .page__presentation {
   padding: 81px 0; }
