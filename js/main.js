@@ -56,11 +56,22 @@ $(".statistics__number").counterUp({delay:1,time:500});
 
 //==============================================================
 
-$(document).ready(function(){
+
     $('.slider').slick({
          infinite: true,
          slidesToShow: 3,
-         slidesToScroll: 1
+         slidesToScroll: 1,
+         responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+
+                    slidesToShow: 1
+                }
+            },
+         ]
     })
-});
+
+// $(document).ready(function(){
+//});
 
