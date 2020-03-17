@@ -842,6 +842,10 @@ nav#project__toggle {
 		width: 374px;
 		margin: 0 auto;
 		border: 1px solid #f8f8f8;
+		&:hover {
+			background-color: #362f2d;
+			transition: 0.5s;
+		}
 		@media (max-width:404px){
 			width: 300px;
 		}
@@ -850,10 +854,6 @@ nav#project__toggle {
 		flex: 0 1 31%;
 		position: relative;
 		margin: 0 12px;
-		&:hover {
-			background-color: #362f2d;
-			transition: 0.5s;
-		}
 		&:hover h3 {
 			color: #c7b299;
 			transition: 0.5s;
@@ -896,7 +896,7 @@ nav#project__toggle {
 	}
 	&__images {
 		img {
-			width: 374px;
+			width: 372px;
 			@media (max-width:404px){
 				width: 298px;
 			}
@@ -1031,21 +1031,37 @@ nav#project__toggle {
 		margin: 142px 0 0 0;
 		height: 489px;
 		position: relative;
+		@media (max-width:1200px) {
+
+		}
 	}
 }
 
 .partners {
 	&__body {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-right: -50%;
-		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 489px;
+		max-width: 1200px;
+	}
+	&__item {
 		display: flex;
 		justify-content: space-between;
 		width: 1110px;
+		@media (max-width:600px) {
+			flex-wrap: wrap;
+			width: 250px;
+			height: 250px;
+		}
 		img {
 			align-self: center;
+			@media (max-width:1200px) {
+				width: 145px;
+			}
+			@media (max-width:768px) {
+				width: 100px;
+			}
 		}
 	}
 }
