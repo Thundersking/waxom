@@ -231,6 +231,7 @@
 			transition: all 0.3s ease 0s;
 			background-color: rgba(0, 0, 0, 0.9);
 			padding: 70px 10px 20px 10px; /*спускает навигацию вниз*/
+			z-index: 2;
 		}
 		&__menu.active {
 			top: 0;
